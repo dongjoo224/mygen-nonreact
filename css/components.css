@@ -1,0 +1,216 @@
+/* ===== WHY MYGEN SECTION ===== */
+/* Benefits grid styling */
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.benefit-card {
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.2);
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.benefit-icon i {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+}
+
+.benefit-card h4 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.benefit-card p {
+    color: #cccccc;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===== TESTIMONIALS SECTION ===== */
+/* Testimonial carousel styling */
+
+.testimonials-carousel {
+  position: relative;
+  text-align: center;
+  width: 100%;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.testimonial-card {
+    background: rgba(6, 182, 212, 0.05);
+    border: 1px solid rgba(6, 182, 212, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.testimonial-card.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+
+.testimonial-content p {
+    color: #ffffff;
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-avatar {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.author-info {
+    text-align: left;
+}
+
+.author-name {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.author-role {
+    color: #cccccc;
+    font-size: 0.875rem;
+}
+
+/* Testimonial dots */
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #06b6d4;
+    transform: scale(1.2);
+}
+
+/* wellness diamond */
+
+
+/* ===== SOLUTION SECTION SPECIFIC ===== */
+/* Styles for the solution section */
+
+.solution-principles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+
+.principle-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background: rgba(245, 158, 11, 0.05); /* subtle orange tint */
+    border: 1px solid rgba(245, 158, 11, 0.10); /* subtle orange border */
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.principle-item:hover {
+    background: rgba(245, 158, 11, 0.10); /* slightly more orange on hover */
+    border-color: rgba(245, 158, 11, 0.20);
+    transform: translateY(-2px);
+}
+
+.principle-icon {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.principle-icon i {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #fff7e6;
+}
+
+.principle-content h4 {
+    color: #ffffff;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.principle-content p {
+    color: #cccccc;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+}

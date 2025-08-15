@@ -1,0 +1,146 @@
+
+/* ===== MINIMAL HEADER ===== */
+/* Sleek, unobtrusive navigation */
+
+/* Make navbar background more transparent and add blur for blend effect */
+/* Fully transparent navbar for hero blend */
+/* Slightly translucent navbar for hero blend */
+/* Slightly translucent navbar for hero blend */
+.header-minimal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.22); /* Even more transparent */
+    backdrop-filter: blur(10px) saturate(120%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.nav-wrapper-minimal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.logo-minimal {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.logo-icon-minimal {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 800;
+    font-size: 1.125rem;
+}
+
+.nav-menu-minimal {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link-minimal {
+    color: #cccccc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link-minimal:hover,
+.nav-link-minimal.active {
+    color: #06b6d4;
+}
+
+.nav-link-minimal.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    border-radius: 1px;
+}
+
+/* Mobile menu toggle */
+.mobile-menu-toggle-minimal {
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu-toggle-minimal span {
+    width: 1.5rem;
+    height: 2px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+
+/* ===== MINIMAL FOOTER ===== */
+/* Clean, simple footer */
+
+.footer-minimal {
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 0;
+}
+
+.footer-content-minimal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-logo-minimal {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.footer-links-minimal {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links-minimal a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links-minimal a:hover {
+    color: #06b6d4;
+}
+
+.footer-copyright p {
+    color: #888888;
+    font-size: 0.875rem;
+    margin: 0;
+}

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800;900&display=swap');
+
+
+body {
+      background: #181c23;
+      color: #fff;
+      font-family: 'Urbanist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+}
+
+.login-btn, 
+.email-section, 
+.email-btn {
+    font-family: 'Urbanist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.login-container {
+    background: #23272f;
+    padding: 2rem 2.5rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 320px;
+    max-width: 90vw;
+}
+.login-btn, .email-btn {
+    background: linear-gradient(90deg, #ff7a00 0%, #ffb347 100%);
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.9rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s;
+}
+.login-btn:hover, .email-btn:hover {
+    background: #ff7a00;
+}
+.email-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+}
+.email-input {
+    padding: 0.7rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid #ffb347;
+    background: #181c23;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    margin-bottom: 0.5rem;
+    transition: border 0.2s;
+}
+.email-input:focus {
+    border: 1.5px solid #ff7a00;
+}
