@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic HTML document setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - MyGen Wellness</title>
+    
+    <!-- Link to our custom CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons CDN for consistent iconography -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- 
+        HOW IT WORKS PAGE STRUCTURE:
+        1. Header with navigation
+        2. Hero section
+        3. 5-step process section
+        4. Benefits section with phone mockup
+        5. Call-to-action section
+        6. Footer
+    -->
+
+    <!-- HEADER SECTION (Same as homepage) -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo and brand name -->
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">M</div>
+                    <span class="logo-text">MyGen Wellness</span>
+                </a>
+                
+                <!-- Main navigation menu -->
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="how-it-works.html" class="nav-link active">How It Works</a>
+                    <a href="science.html" class="nav-link">Science</a>
+                    <a href="#" class="nav-link">Community</a>
+                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </nav>
+                
+                <!-- Action buttons -->
+                <div class="nav-actions">
+                    <button class="btn-ghost">Log in</button>
+                    <button class="btn-primary">Try for free</button>
+                </div>
+                
+                <!-- Mobile menu toggle button -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content-center">
+                    <!-- Beta badge -->
+                    <div class="beta-badge">
+                        <i data-lucide="play"></i>
+                        <span>See How It Works</span>
+                    </div>
+                    
+                    <!-- Main headline -->
+                    <h1 class="hero-title-center">
+                        Your Journey to 
+                        <span class="gradient-text">Lasting Wellness</span>
+                    </h1>
+                    
+                    <!-- Subtitle description -->
+                    <p class="hero-description-center">
+                        Discover how MyGen transforms your health through personalized, AI-powered coaching 
+                        that makes wellness simple, sustainable, and scientifically sound.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS STEPS SECTION -->
+        <section class="process-steps">
+            <div class="container">
+                <div class="section-header">
+                    <h2>5 Simple Steps to Transform Your Wellness</h2>
+                    <p>Our proven process makes building healthy habits effortless and enjoyable</p>
+                </div>
+                
+                <!-- Step 1: Quick Onboarding -->
+                <div class="step-container">
+                    <div class="step-content">
+                        <div class="step-text">
+                            <div class="step-header">
+                                <div class="step-icon icon-cyan">
+                                    <i data-lucide="clipboard-list"></i>
+                                </div>
+                                <div class="step-badge">Step 1</div>
+                            </div>
+                            <h3>Quick Onboarding</h3>
+                            <p>Complete a brief assessment about your wellness goals, current habits, and lifestyle preferences. Our AI analyzes your responses to create your personalized wellness profile.</p>
+                        </div>
+                        <div class="step-visual">
+                            <div class="step-phone">
+                                <div class="phone-screen screen-cyan">
+                                    <div class="screen-content">
+                                        <div class="screen-icon">
+                                            <i data-lucide="clipboard-list"></i>
+                                        </div>
+                                        <h4>Quick Onboarding</h4>
+                                        <p>Complete a brief assessment about your wellness goals, current habits, and lifestyle preferences.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-arrow">
+                        <i data-lucide="arrow-down"></i>
+                    </div>
+                </div>
+
+                <!-- Step 2: Personalized Plan -->
+                <div class="step-container step-reverse">
+                    <div class="step-content">
+                        <div class="step-visual">
+                            <div class="step-phone">
+                                <div class="phone-screen screen-green">
+                                    <div class="screen-content">
+                                        <div class="screen-icon">
+                                            <i data-lucide="target"></i>
+                                        </div>
+                                        <h4>Personalized Plan</h4>
+                                        <p>Receive your custom wellness plan based on the Wellness Diamond framework.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-text">
+                            <div class="step-header">
+                                <div class="step-icon icon-green">
+                                    <i data-lucide="target"></i>
+                                </div>
+                                <div class="step-badge">Step 2</div>
+                            </div>
+                            <h3>Personalized Plan</h3>
+                            <p>Receive your custom wellness plan based on the Wellness Diamond framework. Your plan includes tiny daily activities across motion, nutrition, sleep, and mindfulness.</p>
+                        </div>
+                    </div>
+                    <div class="step-arrow">
+                        <i data-lucide="arrow-down"></i>
+                    </div>
+                </div>
+
+                <!-- Step 3: Daily Nudges -->
+                <div class="step-container">
+                    <div class="step-content">
+                        <div class="step-text">
+                            <div class="step-header">
+                                <div class="step-icon icon-blue">
+                                    <i data-lucide="bell"></i>
+                                </div>
+                                <div class="step-badge">Step 3</div>
+                            </div>
+                            <h3>Daily Nudges</h3>
+                            <p>Get gentle, intelligent reminders throughout your day. Our AI learns your schedule and preferences to send the right nudge at the perfect time.</p>
+                        </div>
+                        <div class="step-visual">
+                            <div class="step-phone">
+                                <div class="phone-screen screen-blue">
+                                    <div class="screen-content">
+                                        <div class="screen-icon">
+                                            <i data-lucide="bell"></i>
+                                        </div>
+                                        <h4>Daily Nudges</h4>
+                                        <p>Get gentle, intelligent reminders throughout your day.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-arrow">
+                        <i data-lucide="arrow-down"></i>
+                    </div>
+                </div>
+
+                <!-- Step 4: Earn Points -->
+                <div class="step-container step-reverse">
+                    <div class="step-content">
+                        <div class="step-visual">
+                            <div class="step-phone">
+                                <div class="phone-screen screen-purple">
+                                    <div class="screen-content">
+                                        <div class="screen-icon">
+                                            <i data-lucide="star"></i>
+                                        </div>
+                                        <h4>Earn Points</h4>
+                                        <p>Complete activities to earn points and unlock achievements.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-text">
+                            <div class="step-header">
+                                <div class="step-icon icon-purple">
+                                    <i data-lucide="star"></i>
+                                </div>
+                                <div class="step-badge">Step 4</div>
+                            </div>
+                            <h3>Earn Points</h3>
+                            <p>Complete activities to earn points and unlock achievements. Track your progress across all four dimensions of the Wellness Diamond.</p>
+                        </div>
+                    </div>
+                    <div class="step-arrow">
+                        <i data-lucide="arrow-down"></i>
+                    </div>
+                </div>
+
+                <!-- Step 5: Build Habits -->
+                <div class="step-container">
+                    <div class="step-content">
+                        <div class="step-text">
+                            <div class="step-header">
+                                <div class="step-icon icon-orange">
+                                    <i data-lucide="check-circle"></i>
+                                </div>
+                                <div class="step-badge">Step 5</div>
+                            </div>
+                            <h3>Build Habits</h3>
+                            <p>Watch as tiny activities compound into lasting habits. Our science-backed approach ensures sustainable behavior change that sticks.</p>
+                        </div>
+                        <div class="step-visual">
+                            <div class="step-phone">
+                                <div class="phone-screen screen-orange">
+                                    <div class="screen-content">
+                                        <div class="screen-icon">
+                                            <i data-lucide="check-circle"></i>
+                                        </div>
+                                        <h4>Build Habits</h4>
+                                        <p>Watch as tiny activities compound into lasting habits.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFITS SECTION -->
+        <section class="benefits">
+            <div class="container">
+                <div class="benefits-content">
+                    <!-- Left side: Text content -->
+                    <div class="benefits-text">
+                        <h2>
+                            Why Our Approach 
+                            <span class="gradient-text">Actually Works</span>
+                        </h2>
+                        <p>Unlike traditional wellness apps that overwhelm you with drastic changes, MyGen focuses on tiny, sustainable activities that compound into lasting transformation.</p>
+                        
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <i data-lucide="check-circle" class="benefit-icon"></i>
+                                <span>No overwhelming changes - just tiny, manageable activities</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i data-lucide="check-circle" class="benefit-icon"></i>
+                                <span>AI adapts to your schedule and preferences</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i data-lucide="check-circle" class="benefit-icon"></i>
+                                <span>Science-backed approach proven to create lasting habits</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i data-lucide="check-circle" class="benefit-icon"></i>
+                                <span>Holistic wellness across all life dimensions</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i data-lucide="check-circle" class="benefit-icon"></i>
+                                <span>Community support and social features</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i data-lucide="check-circle" class="benefit-icon"></i>
+                                <span>Progress tracking and personalized insights</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right side: App mockup -->
+                    <div class="benefits-visual">
+                        <div class="benefits-phone">
+                            <div class="phone-screen screen-gradient">
+                                <div class="app-interface">
+                                    <div class="app-header">
+                                        <h4>Today's Activities</h4>
+                                        <span class="completion-badge">4/5 Complete</span>
+                                    </div>
+                                    
+                                    <div class="activity-list">
+                                        <div class="activity-item completed">
+                                            <i data-lucide="check-circle"></i>
+                                            <span>Drink 8oz water</span>
+                                        </div>
+                                        <div class="activity-item completed">
+                                            <i data-lucide="check-circle"></i>
+                                            <span>5-minute walk</span>
+                                        </div>
+                                        <div class="activity-item completed">
+                                            <i data-lucide="check-circle"></i>
+                                            <span>Deep breathing</span>
+                                        </div>
+                                        <div class="activity-item completed">
+                                            <i data-lucide="check-circle"></i>
+                                            <span>Gratitude note</span>
+                                        </div>
+                                        <div class="activity-item">
+                                            <div class="activity-circle"></div>
+                                            <span>Evening stretch</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="progress-section">
+                                        <h4>Weekly Progress</h4>
+                                        <div class="progress-item">
+                                            <span>Motion</span>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 85%"></div>
+                                            </div>
+                                            <span>85%</span>
+                                        </div>
+                                        <div class="progress-item">
+                                            <span>Nutrition</span>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 92%"></div>
+                                            </div>
+                                            <span>92%</span>
+                                        </div>
+                                        <div class="progress-item">
+                                            <span>Mindfulness</span>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 78%"></div>
+                                            </div>
+                                            <span>78%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL-TO-ACTION SECTION -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Journey?</h2>
+                    <p>Join thousands who are already building lasting wellness habits with MyGen's AI-powered approach.</p>
+                    
+                    <div class="cta-buttons">
+                        <button class="btn-white-large" onclick="handleBetaInvitation()">
+                            Join Beta (Invite Only)
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                        <button class="btn-outline-white-large">
+                            <i data-lucide="smartphone"></i>
+                            Download App
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION (Same as homepage) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company info -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">M</div>
+                        <span class="logo-text">MyGen Wellness</span>
+                    </div>
+                    <p>Democratizing wellness for all using science and AI.</p>
+                </div>
+                
+                <!-- Product links -->
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="science.html">Science</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company links -->
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support links -->
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 MyGen Wellness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
+

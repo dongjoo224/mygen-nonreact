@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic HTML document setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - MyGen Wellness</title>
+    
+    <!-- Link to our custom CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons CDN for consistent iconography -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- MINIMAL HEADER -->
+    <header class="header-minimal">
+        <div class="container">
+            <div class="nav-wrapper-minimal">
+                <!-- Logo and brand name -->
+                <a href="index.html" class="logo-minimal">
+                    <div class="logo-icon-minimal">M</div>
+                    <span class="logo-text-minimal">MyGen</span>
+                </a>
+                
+                <!-- Minimal navigation menu -->
+                <nav class="nav-menu-minimal" id="navMenu">
+                    <a href="index.html" class="nav-link-minimal">Home</a>
+                    <a href="how-it-works-new.html" class="nav-link-minimal active">How It Works</a>
+                    <a href="science.html" class="nav-link-minimal">Science</a>
+                    <a href="#" class="nav-link-minimal">Community</a>
+                    <a href="#" class="nav-link-minimal">About</a>
+                    <a href="#" class="nav-link-minimal">Contact</a>
+                </nav>
+                
+                <!-- Mobile menu toggle button -->
+                <button class="mobile-menu-toggle-minimal" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-how-it-works">
+            <div class="container">
+                <div class="hero-content-centered">
+                    <!-- Beta badge -->
+                    <div class="beta-badge-minimal">
+                        <i data-lucide="map"></i>
+                        <span>The Path Unveiled</span>
+                    </div>
+                    
+                    <!-- Main title -->
+                    <h1 class="hero-title-centered">
+                        Your journey to
+                        <span class="gradient-text-turquoise">lasting wellness</span>
+                        starts here
+                    </h1>
+                    
+                    <!-- Subtitle -->
+                    <p class="hero-description-centered">
+                        MyGen's AI-powered approach transforms the overwhelming world of wellness into a personalized, step-by-step journey that actually works.
+                    </p>
+                    
+                    <!-- Scroll indicator -->
+                    <div class="scroll-indicator-centered">
+                        <div class="scroll-line"></div>
+                        <div class="scroll-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section class="cta-how-it-works">
+            <div class="container">
+                <div class="cta-content">
+                    <div class="section-badge-light">
+                        <i data-lucide="rocket"></i>
+                        <span>Ready To Begin?</span>
+                    </div>
+                    
+                    <h2 class="cta-title">
+                        Your transformation
+                        <span class="gradient-text-turquoise">starts now</span>
+                    </h2>
+                    
+                    <p class="cta-description">
+                        Join the exclusive MyGen beta and experience the future of personalized wellness. Limited spots available.
+                    </p>
+                    
+                    <div class="cta-actions">
+                        <button class="btn-primary-large" onclick="handleBetaInvitation()">
+                            <span>Request Beta Access</span>
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                        
+                        <div class="cta-note">
+                            <i data-lucide="users"></i>
+                            <span>Join 1,000+ beta users already transforming their lives</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MINIMAL FOOTER -->
+    <footer class="footer-minimal">
+        <div class="container">
+            <div class="footer-content-minimal">
+                <div class="footer-logo-minimal">
+                    <div class="logo-icon-minimal">M</div>
+                    <span class="logo-text-minimal">MyGen</span>
+                </div>
+                
+                <div class="footer-links-minimal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Contact</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>&copy; 2025 MyGen Wellness. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
+

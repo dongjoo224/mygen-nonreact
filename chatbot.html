@@ -1,0 +1,219 @@
+<!-- AI CHATBOT SIDEBAR -->
+<div id="aiChatSidebar" class="ai-chat-sidebar">
+    <div class="ai-chat-header">
+        <span>AI Chatbot</span>
+        <button id="closeChatSidebar" class="ai-chat-close" title="Close">&times;</button>
+    </div>
+    <div class="ai-chat-messages" id="aiChatMessages">
+        <div class="ai-chat-message-ai-chat-message-bot">
+            <span>Hi! I'm your MyGen AI assistant. How can I help you today?</span>
+        </div>
+    </div>
+    <form class="ai-chat-input-area" id="aiChatForm" autocomplete="off">
+        <input type="text" id="aiChatInput" placeholder="Type your message..." autocomplete="off" />
+        <button type="submit" class="ai-chat-send">Send</button>
+    </form>
+</div>
+<button id="openChatSidebar" class="ai-chat-open-btn" title="Chat with AI">
+    <i data-lucide="message-circle"></i>
+</button>
+
+<style>
+  .ai-chat-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 340px;
+    height: 100vh;
+    background: #181c23;
+    border-left: 2px solid #ff7a00;
+    box-shadow: -2px 0 16px 0 rgba(0,0,0,0.18);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+  }
+  .ai-chat-sidebar.open {
+    transform: translateX(0);
+  }
+  body.sidebar-open main,
+  body.sidebar-open header,
+  body.sidebar-open footer {
+    transition: margin-right 0.3s cubic-bezier(.4,0,.2,1);
+    margin-right: 340px;
+  }
+  @media (max-width: 900px) {
+    body.sidebar-open main,
+    body.sidebar-open header,
+    body.sidebar-open footer {
+      margin-right: 0;
+    }
+  }
+  .ai-chat-header {
+    background: linear-gradient(90deg, #ff7a00 0%, #ffb347 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffb347;
+  }
+  .ai-chat-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: color 0.2s;
+  }
+  .ai-chat-close:hover {
+    color: #181c23;
+    background: #fff2e0;
+    border-radius: 50%;
+  }
+  .ai-chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background: #181c23;
+    color: #fff;
+    font-family: 'Inter', 'Plus Jakarta Sans', 'Raleway', 'Urbanist', sans-serif;
+  }
+  .ai-chat-message {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+  }
+  .ai-chat-message-bot {
+    color: #ffb347;
+  }
+  .ai-chat-message-user {
+    color: #fff;
+    justify-content: flex-end;
+    width: 100%;
+    text-align: right;
+  }
+  .ai-chat-input-area {
+    display: flex;
+    border-top: 1px solid #ffb347;
+    background: #181c23;
+    padding: 0.7rem 1rem;
+  }
+  .ai-chat-input-area input {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid #ffb347;
+    background: #23272f;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    margin-right: 0.7rem;
+    transition: border 0.2s;
+  }
+  .ai-chat-input-area input:focus {
+    border: 1.5px solid #ff7a00;
+  }
+  .ai-chat-send {
+    background: linear-gradient(90deg, #ff7a00 0%, #ffb347 100%);
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .ai-chat-send:hover {
+    background: #ff7a00;
+  }
+  .ai-chat-open-btn {
+    position: fixed;
+    right: 2.2rem;
+    bottom: 2.2rem;
+    z-index: 9998;
+    background: linear-gradient(90deg, #ff7a00 0%, #ffb347 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.18);
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+  .ai-chat-open-btn:hover {
+    background: #ff7a00;
+    box-shadow: 0 6px 24px 0 rgba(255,122,0,0.18);
+  }
+  @media (max-width: 600px) {
+    .ai-chat-sidebar {
+      width: 100vw;
+      min-width: 0;
+      border-left: none;
+      border-top: 2px solid #ff7a00;
+      top: auto;
+      bottom: 0;
+      height: 60vh;
+      border-radius: 1.2rem 1.2rem 0 0;
+      box-shadow: 0 -2px 16px 0 rgba(0,0,0,0.18);
+    }
+    .ai-chat-open-btn {
+      right: 1rem;
+      bottom: 1rem;
+      width: 48px;
+      height: 48px;
+      font-size: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+// Sidebar open/close logic with body shift
+const aiSidebar = document.getElementById('aiChatSidebar');
+const openBtn = document.getElementById('openChatSidebar');
+const closeBtn = document.getElementById('closeChatSidebar');
+openBtn.addEventListener('click', () => {
+  aiSidebar.classList.add('open');
+  openBtn.style.display = 'none';
+  document.body.classList.add('sidebar-open');
+});
+closeBtn.addEventListener('click', () => {
+  aiSidebar.classList.remove('open');
+  openBtn.style.display = 'flex';
+  document.body.classList.remove('sidebar-open');
+});
+
+// Chatbot message logic (demo only)
+const chatForm = document.getElementById('aiChatForm');
+const chatInput = document.getElementById('aiChatInput');
+const chatMessages = document.getElementById('aiChatMessages');
+chatForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const msg = chatInput.value.trim();
+  if (!msg) return;
+  // Add user message
+  const userMsg = document.createElement('div');
+  userMsg.className = 'ai-chat-message ai-chat-message-user';
+  userMsg.innerHTML = `<span>${msg}</span>`;
+  chatMessages.appendChild(userMsg);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+  chatInput.value = '';
+  // Demo bot reply
+  setTimeout(() => {
+    const botMsg = document.createElement('div');
+    botMsg.className = 'ai-chat-message ai-chat-message-bot';
+    botMsg.innerHTML = `<span>I'm just a demo for now, but soon I'll answer your wellness questions!</span>`;
+    chatMessages.appendChild(botMsg);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }, 700);
+});
+</script>
